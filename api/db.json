@@ -1,0 +1,59 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Notebooks"
+    },
+    {
+      "id": 2,
+      "name": "Auriculares"
+    },
+    {
+      "id": 3,
+      "name": "Monitores"
+    },
+    {
+      "id": 4,
+      "name": "Teclados"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Auriculares Z",
+      "categoryId": 2,
+      "price": 19999,
+      "stock": 5,
+      "image": "https://picsum.photos/seed/auris/400/300",
+      "description": "Sonido Hi\u2011Fi y micr\u00f3fono."
+    },
+    {
+      "id": 2,
+      "name": "Monitor 27\" QHD",
+      "categoryId": 3,
+      "price": 459999,
+      "stock": 3,
+      "image": "https://picsum.photos/seed/monitor/400/300",
+      "description": "IPS 165Hz con DP."
+    },
+    {
+      "id": 3,
+      "name": "Notebook 14\"",
+      "categoryId": 1,
+      "price": 799999,
+      "stock": 8,
+      "image": "https://picsum.photos/seed/notebook/400/300",
+      "description": "Liviana para estudiar."
+    },
+    {
+      "id": 4,
+      "name": "Teclado 60%",
+      "categoryId": 4,
+      "price": 89999,
+      "stock": 0,
+      "image": "https://picsum.photos/seed/teclado/400/300",
+      "description": "Compacto RGB."
+    }
+  ],
+  "users": []
+}
