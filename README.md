@@ -1,33 +1,40 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# iStore E-commerce MVP
 
-# Run and deploy your AI Studio app
+## Requisitos
 
-This contains everything you need to run your app locally.
+- Node.js 18 o superior
+- npm
 
-View your app in AI Studio: https://ai.studio/apps/0dd4555a-e108-4266-b463-2a5c8be438a2
+## Ejecutar en desarrollo
 
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
+1. Instalar dependencias:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+2. Levantar el proyecto:
    `npm run dev`
+3. Abrir en el navegador:
+   `http://localhost:3000`
 
-## Deploy Mode (Production)
+## Ejecutar en producción local
 
-1. Install dependencies:
+1. Instalar dependencias:
    `npm install`
-2. Start server in production mode:
+2. Levantar en modo producción:
    `npm start`
 
-`npm start` already builds the project and then launches the server.
-Open: `http://localhost:3000`
+`npm start` genera el build y luego levanta el servidor.
 
-Alias option:
-`npm run start:prod`
+## Scripts útiles
+
+- `npm run build`: genera la versión de producción
+- `npm run lint`: valida tipos con TypeScript
+
+## Solución de problemas
+
+- Error `EADDRINUSE: address already in use 0.0.0.0:3000`:
+   Ya hay otra instancia corriendo en el puerto 3000. Cierra ese proceso (Ctrl+C en la terminal donde está activo) o usa otro puerto.
+
+- La pestaña o favicon no se actualiza:
+   Haz recarga forzada con `Ctrl+F5` porque el navegador puede cachear recursos estáticos.
+
+- Si cambias imágenes en `public/` y no se reflejan:
+   Reinicia `npm start` y vuelve a recargar el navegador.
