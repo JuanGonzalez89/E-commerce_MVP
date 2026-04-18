@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@200;300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --color-bg: #050505;
+  --color-surface: #121212;
+  --color-card: #1c1c1e;
+  --color-accent: #E5E5E5;
+  --color-gold: #D4AF37;
+  --color-text-main: #FFFFFF;
+  --color-text-dim: #8E8E93;
+  --color-border-dim: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-bg text-text-main antialiased selection:bg-accent selection:text-bg;
+  }
+}
+
+.glass-morphism {
+  @apply backdrop-blur-xl bg-surface/90 border-b border-white/[0.08] shadow-2xl shadow-black/20;
+}
+
+.nav-idle {
+  @apply bg-transparent border-b border-transparent backdrop-blur-none;
+}
+
+.apple-button {
+  @apply px-6 py-2.5 rounded-xl font-medium transition-all duration-300;
+}
+
+.apple-button-primary {
+  @apply bg-accent text-bg hover:opacity-90 active:scale-95 shadow-lg shadow-white/5;
+}
+
+.apple-button-secondary {
+  @apply bg-card text-text-main border border-border-dim hover:bg-surface active:scale-95;
+}
+
+.product-card-style {
+  @apply bg-card rounded-2xl p-4 border border-transparent hover:border-border-dim transition-all duration-300;
+}
+
+.section-title-style {
+  @apply text-[11px] uppercase tracking-[1px] text-text-dim mb-4 font-semibold;
+}
