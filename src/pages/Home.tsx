@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { ArrowRight, Zap, ShieldCheck, Truck, HeadphonesIcon, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
+import Macbook3D from '../components/Macbook3D';
 import { Product } from '../types';
 
 export default function Home() {
@@ -113,7 +114,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {featured.map(product => (
-              <div key={product.id}>
+              <div key={product.id} className="h-full">
                 <ProductCard product={product as any} />
               </div>
             ))}
@@ -159,12 +160,9 @@ export default function Home() {
             className="relative"
           >
             <div className="absolute -inset-10 bg-accent/5 blur-[100px] rounded-full"></div>
-            <img 
-              src="/macbook_seccion_landing.jpg" 
-              alt="Apple Design" 
-              className="relative rounded-3xl opacity-80 shadow-2xl object-cover aspect-square border border-border-dim"
-              referrerPolicy="no-referrer"
-            />
+            <div className="relative">
+              <Macbook3D />
+            </div>
           </motion.div>
         </div>
       </section>

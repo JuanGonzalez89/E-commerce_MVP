@@ -14,7 +14,7 @@ export default function ProductCard({ product }: { product: Product }) {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="group product-card-style"
+      className="group product-card-style h-full flex flex-col"
     >
       <Link to={`/product/${product.id}`} className="block relative overflow-hidden rounded-xl bg-surface aspect-square">
         <img 
@@ -30,7 +30,7 @@ export default function ProductCard({ product }: { product: Product }) {
         )}
       </Link>
 
-      <div className="mt-6">
+      <div className="mt-6 flex flex-col flex-1">
         <div className="flex justify-between items-start mb-2">
           <div>
             <span className="text-[10px] font-semibold text-text-dim uppercase tracking-widest">{product.category}</span>
@@ -49,11 +49,11 @@ export default function ProductCard({ product }: { product: Product }) {
         </p>
 
         {/* Specs Summary */}
-        <div className="flex flex-wrap gap-2 mb-6">
+        <div className="grid grid-cols-2 gap-2 mb-6 min-h-[92px]">
           {Object.entries(product.specs).slice(0, 3).map(([key, value]) => (
-            <div key={key} className="bg-surface/50 border border-border-dim/50 px-2 py-1 rounded-md">
+            <div key={key} className="bg-surface/50 border border-border-dim/50 px-2 py-1 rounded-md min-w-0">
               <span className="text-[8px] text-text-dim uppercase tracking-wider block">{key}</span>
-              <span className="text-[10px] text-text-main font-medium">{value}</span>
+              <span className="text-[10px] text-text-main font-medium block truncate">{value}</span>
             </div>
           ))}
         </div>

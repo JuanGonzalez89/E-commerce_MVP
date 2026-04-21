@@ -40,6 +40,16 @@ import Register from './pages/Register';
 import CartPage from './pages/Cart';
 import Checkout from './pages/Checkout';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [pathname]);
+
+  return null;
+}
+
 function Navbar() {
   const { user, logout } = useAuth();
   const { totalItems } = useCart();
@@ -310,6 +320,7 @@ export default function App() {
     <AuthContext.Provider value={{ user, loading, login, register, logout }}>
       <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateQuantity, clearCart, totalItems }}>
         <BrowserRouter>
+          <ScrollToTop />
           <div className="flex flex-col min-h-screen">
             <Navbar />
             <main className="flex-grow pt-24">
